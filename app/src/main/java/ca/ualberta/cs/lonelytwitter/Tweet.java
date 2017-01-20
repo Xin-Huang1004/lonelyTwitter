@@ -11,11 +11,17 @@ public abstract class Tweet {
 
     private Date date;
     private String message;
+
+    public ArrayList<Mood> getMoodLIst() {
+        return MoodLIst;
+    }
+
     private ArrayList<Mood> MoodLIst;
 
     public Tweet(String message){
         this.message = message;
         this.date = new Date();
+        MoodLIst = new ArrayList<Mood>();
     }
 
     public Tweet(Date date, String message) {
@@ -44,5 +50,9 @@ public abstract class Tweet {
     }
 
     public abstract Boolean isImportant();
+
+    public void addmood(Mood mood){
+        MoodLIst.add(mood);
+    }
 
 }
