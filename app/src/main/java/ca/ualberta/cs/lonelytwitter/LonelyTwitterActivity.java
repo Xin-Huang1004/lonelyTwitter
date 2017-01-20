@@ -58,6 +58,7 @@ public class LonelyTwitterActivity extends Activity {
 
 
 
+
 				saveInFile(text, new Date(System.currentTimeMillis()));
 				finish();
 

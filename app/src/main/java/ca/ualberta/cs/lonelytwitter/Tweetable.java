@@ -7,6 +7,4 @@ package ca.ualberta.cs.lonelytwitter;
 public interface Tweetable {
     public String getMessages();
     public void setMessage(String string) throws TweetTooLongException;
-
-
 }
