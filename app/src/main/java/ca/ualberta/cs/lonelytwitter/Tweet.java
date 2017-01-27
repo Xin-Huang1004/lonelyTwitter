@@ -51,6 +51,11 @@ public abstract class Tweet {
 
     public abstract Boolean isImportant();
 
+    @Override
+    public String toString(){
+        return date.toString() +  " | " + message;
+    }
+
     public void addmood(Mood mood){
         MoodLIst.add(mood);
     }
