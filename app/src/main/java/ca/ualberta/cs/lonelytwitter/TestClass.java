@@ -5,6 +5,9 @@
  * You can find a copy a file license in this project. otherwise please contact contact@abc.ca
  */
 
+
+/** This is a test class
+
 package ca.ualberta.cs.lonelytwitter;
 
 /**

@@ -4,29 +4,8 @@ import java.util.Date;
 
 
 /**
- * This class is the main view class of the project. <br> In this class,
- * user interaction and file manipulation is performed.
- * All files are in the form of "json" files that are stored in Emulator's
- * accessible from Android Device Monitor:
- * <pre>
- *     pre-formatted text: <br>
- *         File Explorer -> data -> data -> ca.ualberta.cs.lonlytwitter -> files -> file.sav.
- * </pre>
- * <code> begin <br>
- *     some pseduo code here <br>
- * end.</code>
- * The file name is indicated in the &nbsp &nbsp &nbsp FILENAME constant.
- * <ul>
- *     <li>item 1</li>
- *     <li>item 2</li>
- *     <li>item 3</li>
- * </ul>
- * <ol>
- *     <li>item 1</li>
- *     <li>item 2</li>
- *     <li>item 3</li>
- * </ol>
- *
+ * This class is the mood class
+ * return the user's mood
  * @author Xin Huang
  * @version  1.4.2
  * @since 1.0
@@ -35,9 +14,13 @@ import java.util.Date;
  * Created by xhuang2 on 1/19/17.
  */
 
+
 public abstract class Mood {
     private Date date;
 
+    /**
+     * get the date
+     */
     public Mood(){
         this.date = new Date();
     }
@@ -47,9 +30,18 @@ public abstract class Mood {
 
     }
 
+    /**
+     * return the date
+     * @return date
+     */
     public Date getDate() {
         return date;
     }
+
+    /**
+     * set the date
+     * @param date
+     */
 
     public void setDate(Date date) {
         this.date = date;

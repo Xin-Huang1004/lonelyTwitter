@@ -6,28 +6,8 @@ import java.util.Date;
 
 
 /**
- * This class is the main view class of the project. <br> In this class,
- * user interaction and file manipulation is performed.
- * All files are in the form of "json" files that are stored in Emulator's
- * accessible from Android Device Monitor:
- * <pre>
- *     pre-formatted text: <br>
- *         File Explorer -> data -> data -> ca.ualberta.cs.lonlytwitter -> files -> file.sav.
- * </pre>
- * <code> begin <br>
- *     some pseduo code here <br>
- * end.</code>
- * The file name is indicated in the &nbsp &nbsp &nbsp FILENAME constant.
- * <ul>
- *     <li>item 1</li>
- *     <li>item 2</li>
- *     <li>item 3</li>
- * </ul>
- * <ol>
- *     <li>item 1</li>
- *     <li>item 2</li>
- *     <li>item 3</li>
- * </ol>
+ * This class is the tweet class
+ * return the user's input
  *
  * @author Xin Huang
  * @version  1.4.2
@@ -63,19 +43,38 @@ public abstract class Tweet {
         this.date = date;
 
     }
-
+    /**
+    * Return the date
+    * @return date
+    */
     public Date getDate() {
         return date;
     }
+
+    /**
+     * Return the date
+     * @param date
+     * @return date
+     */
 
     public void setDate(Date date) {
         this.date = date;
     }
 
+    /**
+     * Return the message
+     * @return message
+     */
+
     public String getMessage() {
         return message;
     }
 
+    /**
+     * Return the message
+     * @param message
+     * @throws TweetTooLongException
+     */
     public void setMessage(String message) throws TweetTooLongException {
         if(message.length() > 140){
             throw new TweetTooLongException();
@@ -85,6 +84,10 @@ public abstract class Tweet {
 
     public abstract Boolean isImportant();
 
+    /**
+     * change the format
+     * @return the output format
+     */
     @Override
     public String toString(){
         return date.toString() +  " | " + message;
